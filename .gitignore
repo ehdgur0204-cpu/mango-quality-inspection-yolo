@@ -51,8 +51,14 @@ venv/
 Thumbs.db
 
 # =========================================
+# Output artifacts
+# =========================================
+outputs/*
+!outputs/README.md
+!outputs/.gitkeep
+
+# =========================================
 # Temporary files
 # =========================================
 *.tmp
 *.log
-outputs/temp/
