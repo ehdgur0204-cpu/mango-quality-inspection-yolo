@@ -1,0 +1,29 @@
+# Shared settings for fair Raw/Cleaned YOLO baseline comparisons.
+# Current dataset uses data/{train,val,test}_images and matching *_labels folders.
+# The pipeline stages these files into Ultralytics' standard images/labels layout.
+dataset_name: raw
+dataset_yaml: ../outputs/temp/baseline_data.yaml
+source_root: ../data
+staging_dir: ../outputs/temp/yolo_dataset
+output_dir: outputs/baseline
+comparison_csv: outputs/baseline/model_comparison.csv
+
+epochs: 50
+imgsz: 640
+batch: 16
+pretrained: true
+optimizer: auto
+seed: 42
+# GPU training is required for this baseline configuration.
+device: 0
+workers: 4
+evaluation_split: test
+
+# Keep this block identical across model runs. Add only shared Ultralytics options.
+augmentation:
+  degrees: 0.0
+  translate: 0.1
+  scale: 0.5
+  fliplr: 0.5
+  mosaic: 1.0
+  mixup: 0.0

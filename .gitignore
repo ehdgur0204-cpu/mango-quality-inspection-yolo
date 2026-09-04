@@ -56,3 +56,9 @@ Thumbs.db
 *.tmp
 *.log
 outputs/temp/
+
+# Baseline model weights
+!outputs/baseline/
+!outputs/baseline/*/
+!outputs/baseline/*/weights/
+!outputs/baseline/*/weights/*.pt
